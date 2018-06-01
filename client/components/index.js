@@ -1,11 +1,18 @@
 import React from 'react'
 
-const Main = () => {
-	return (
-		<div>
+class Main extends React.Component{
+	constructor(){
+		super()
+		this.state = {}
+	}
+
+	render(){
+		return (
+			<div>
         Boilerplate
-		</div>
-	)
+			</div>
+		)
+	}
 }
 
 export default Main

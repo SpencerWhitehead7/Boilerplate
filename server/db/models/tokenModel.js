@@ -1,8 +1,12 @@
-const Sequelize = require(`sequelize`)
-const db = require(`../database`)
+'use strict'
 
-module.exports = db.define(`tokenModel`, {
-	name : {
-		type : Sequelize.STRING,
-	},
+const Sequelize = require(`sequelize`)
+const database = require(`../database`)
+
+const TokenModel = database.define(`tokenModel`, {
+  name : {
+    type : Sequelize.STRING,
+  },
 })
+
+module.exports = TokenModel

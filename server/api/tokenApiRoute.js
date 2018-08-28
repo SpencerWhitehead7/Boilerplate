@@ -2,22 +2,22 @@ const router = require(`express`).Router()
 
 // GET /api/tokenApiRoute/
 router.get(`/`, (req, res, next) => {
-	// content
+  // content
 })
 
 // POST /api/puppies/
 router.post(`/`, (req, res, next) => {
-	// content
+  // content
 })
 
 // PUT /api/tokenApiRoute/:wildcard
 router.put(`/:wildcard`, (req, res, next) => {
-	// content
+  // content
 })
 
 // DELTE /api/tokenApiRoute/:wildcard
 router.delete(`/:wildcard`, (req, res, next) => {
-	// content
+  // content
 })
 
 module.exports = router

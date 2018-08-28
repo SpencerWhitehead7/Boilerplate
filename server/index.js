@@ -33,6 +33,11 @@ app.use((error, req, res, next) => {
   res.status(error.status || 500).send(error.message || `Internal Server Error`)
 })
 
+// 404 responses
+app.use((req, res, next) => {
+  res.status(404).send(`Nothing here. Sorry.`)
+})
+
 // Define port
 const PORT = process.env.PORT || 1337
 

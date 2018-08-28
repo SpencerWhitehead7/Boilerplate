@@ -4,7 +4,7 @@ const express = require(`express`)
 const volleyball = require(`volleyball`)
 const path = require(`path`)
 
-const {db} = require(`./db`)
+const db = require(`./db`)
 
 const app = express()
 

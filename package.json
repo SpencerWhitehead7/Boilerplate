@@ -5,6 +5,8 @@
   "main": "server/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js,.jsx --ignore-pattern /public/*",
+    "lint-fix": "eslint . --ext .js,.jsx --fix --ignore-pattern /public/*",
     "start": "node server",
     "start-dev": "webpack -w & nodemon server.js"
   },

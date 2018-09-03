@@ -15,7 +15,7 @@ app.use(volleyball)
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))
 
-// Static middleware
+// Static file serving middleware
 app.use(express.static(path.join(__dirname, `../public`)))
 
 // API requests

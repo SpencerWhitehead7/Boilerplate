@@ -6,6 +6,7 @@ import reducer from './rootReducer'
 
 const store = createStore(
   reducer,
+  // eslint-disable-next-line no-underscore-dangle
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   applyMiddleware(
     thunkMiddleware.withExtraArgument({axios}),

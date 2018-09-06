@@ -1,5 +1,3 @@
-'use strict'
-
 const express = require(`express`)
 const volleyball = require(`volleyball`)
 const path = require(`path`)

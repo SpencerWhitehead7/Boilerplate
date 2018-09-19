@@ -24,16 +24,19 @@ app.get(`*`, (req, res) => {
   res.sendFile(path.join(__dirname, `../public`))
 })
 
-// Error handling
-app.use((error, req, res, next) => {
-  console.error(error)
-  console.error(error.stack)
-  res.status(error.status || 500).send(error.message || `Internal Server Error`)
+// 404 response
+app.use((req, res, next) => {
+  const err = new Error(`Page Not Found`)
+  err.status = 404
+  next(err)
 })
 
-// 404 responses
-app.use((req, res, next) => {
-  res.status(404).send(`Nothing here. Sorry.`)
+// Error handling endware
+app.use((err, req, res, next) => {
+  console.error(err)
+  console.error(err.stack)
+  res.status(err.status || 500)
+  res.send(err.message || `Internal Server Error`)
 })
 
 // Define port

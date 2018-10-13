@@ -5,7 +5,7 @@ router.get(`/`, (req, res, next) => {
   // content
 })
 
-// POST /api/puppies/
+// POST /api/tokenApiRoute/
 router.post(`/`, (req, res, next) => {
   // content
 })

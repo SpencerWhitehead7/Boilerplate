@@ -21,7 +21,7 @@ app.use(`/api`, require(`./api`))
 
 // All other requests
 app.get(`*`, (req, res) => {
-  res.sendFile(path.join(__dirname, `../public`))
+  res.sendFile(path.join(__dirname, `../public/index.html`))
 })
 
 // 404 response

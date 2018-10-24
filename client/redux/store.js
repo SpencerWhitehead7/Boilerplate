@@ -1,4 +1,4 @@
-import {createStore, applyMiddleware} from 'redux'
+import {createStore, applyMiddleware, compose} from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import {createLogger} from 'redux-logger'
 import axios from 'axios'
@@ -6,11 +6,12 @@ import reducer from './rootReducer'
 
 const store = createStore(
   reducer,
-  // eslint-disable-next-line no-underscore-dangle
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddleware(
-    thunkMiddleware.withExtraArgument({axios}),
-    createLogger()
+  compose(
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    applyMiddleware(
+      thunkMiddleware.withExtraArgument({axios}),
+      createLogger()
+    )
   )
 )
 

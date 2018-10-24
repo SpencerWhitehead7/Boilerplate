@@ -1,9 +1,15 @@
+// NPM modules and built-ins
 const express = require(`express`)
 const volleyball = require(`volleyball`)
 const path = require(`path`)
 
+// Database
 const db = require(`./db`)
 
+// Sub-routers
+const api = require(`./api`)
+
+// Initialize app
 const app = express()
 
 // Logging middleware
@@ -16,8 +22,9 @@ app.use(express.urlencoded({extended : true}))
 // Static file serving middleware
 app.use(express.static(path.join(__dirname, `../public`)))
 
+// Plug in sub-routers
 // API requests
-app.use(`/api`, require(`./api`))
+app.use(`/api`, api)
 
 // All other requests
 app.get(`*`, (req, res) => {

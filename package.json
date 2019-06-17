@@ -2,43 +2,42 @@
   "name": "boilerplate",
   "version": "1.0.0",
   "description": "starter code for express-sequelize-react-redux apps",
+  "browserslist": "> 0.25%, not dead",
   "main": "server/index",
   "scripts": {
     "test": "mocha --exit -- test/*",
     "lint": "eslint . --ext .js,.jsx --ignore-pattern /public/*",
     "lint-fix": "eslint . --ext .js,.jsx --fix --ignore-pattern /public/*",
     "start": "node server",
-    "start-dev": "webpack -w & nodemon server.js"
+    "start-dev": "webpack -wd & nodemon server.js"
   },
   "author": "spencer",
   "license": "Unlicense",
   "dependencies": {
-    "axios": "^0.18.0",
-    "express": "^4.16.4",
-    "pg": "^7.5.0",
-    "pg-hstore": "^2.3.2",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.2.2",
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "sequelize": "^4.41.0"
+    "sequelize": "^5.8.9"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
-    "css-loader": "^1.0.0",
-    "mocha": "^5.2.0",
+    "css-loader": "^3.0.0",
+    "mocha": "^6.1.4",
     "style-loader": "^0.23.1",
     "volleyball": "^1.5.1",
-    "webpack": "^4.22.0",
-    "webpack-cli": "^3.1.2"
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
   }
 }

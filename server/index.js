@@ -1,5 +1,6 @@
 // NPM modules and built-ins
 const express = require(`express`)
+const helmet = require(`helmet`)
 const volleyball = require(`volleyball`)
 const path = require(`path`)
 
@@ -11,6 +12,9 @@ const api = require(`./api`)
 
 // Initialize app
 const app = express()
+
+// Security middleware
+app.use(helmet())
 
 // Logging middleware
 app.use(volleyball)
